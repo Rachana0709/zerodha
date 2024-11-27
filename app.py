@@ -61,7 +61,7 @@ def authenticate_google_sheets():
     """
     try:
         scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-        creds = ServiceAccountCredentials.from_json_keyfile_name("D:\zerodha-442911-0116f6a221fc.json", scope)
+        creds = ServiceAccountCredentials.from_json_keyfile_name("GOOGLE_SHEETS_CREDENTIALS", scope)
         return gspread.authorize(creds)
     except Exception as e:
         logging.error(f"Error authenticating Google Sheets: {e}")
